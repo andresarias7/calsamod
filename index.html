@@ -70,7 +70,18 @@
 
     <div class="content" id="servicios">
         <h2>Servicios</h2>
-        <p>Descripción de los servicios que ofrece la tienda.</p>
+        
+        <!-- Servicio 1: Envío Gratis -->
+        <div class="servicio">
+            <h3>Envío Gratis en Compras Superiores a $100,000</h3>
+            <p>Disfruta de envío gratis en todos los pedidos que superen los $100,000. Entregamos tus zapatos en la puerta de tu casa sin costos adicionales.</p>
+        </div>
+    
+        <!-- Servicio 2: Garantía de Devolución de Dinero -->
+        <div class="servicio">
+            <h3>Garantía de Devolución de Dinero</h3>
+            <p>Si no estás satisfecho con tu compra, te ofrecemos una garantía de devolución del dinero en un plazo de 30 días. Solo tienes que devolvernos los zapatos en su estado original y te reembolsaremos el dinero.</p>
+        </div>
     </div>
 
     <div class="content" id="contacto">
@@ -83,7 +94,31 @@
 
     <div class="content" id="cotizacion">
         <h2>Solicitud de Cotización</h2>
-        <p>En esta sección, se podrá llenar un formulario para solicitar una cotización.</p>
+        <p>Por favor, completa el siguiente formulario para solicitar una cotización personalizada de nuestros productos.</p>
+        
+        <!-- Formulario de Cotización -->
+        <!-- Cambia la acción para que apunte a la ruta de Flask -->
+        <form action="/procesar_cotizacion" method="post">
+            <label for="nombre">Nombre Completo:</label><br>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+    
+            <label for="email">Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="telefono">Teléfono:</label><br>
+            <input type="tel" id="telefono" name="telefono" required><br><br>
+    
+            <label for="producto">Producto de Interés:</label><br>
+            <input type="text" id="producto" name="producto" required><br><br>
+    
+            <label for="cantidad">Cantidad:</label><br>
+            <input type="number" id="cantidad" name="cantidad" required min="1"><br><br>
+    
+            <label for="mensaje">Mensaje o Comentarios:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50" placeholder="Escribe aquí tus comentarios..."></textarea><br><br>
+    
+            <input type="submit" value="Solicitar Cotización">
+        </form>
     </div>
 
     <!-- Pie de página -->
